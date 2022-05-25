@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Password: <input type="password"  id="myinput"><br><br>
+
+
+<script>
+var doc = document.getElementById("myinput");
+document.addEventListener("keydown", testCapsLock);
+document.addEventListener("keyup", testCapsLock);
+    function testCapsLock(event) {
+    if(event.code === "CapsLock"){
+        let isCapsLockOn = event.getModifierState("CapsLock");
+        if(isCapsLockOn) {
+            alert("Caps Lock turned on");
+        } else {
+            alert("Caps Lock turned off");
+        }
+        
+    }
+}
+</script>
+
+</body>
+</html>
