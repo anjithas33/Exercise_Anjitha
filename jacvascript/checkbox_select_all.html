@@ -1,0 +1,39 @@
+
+<html>
+    <body>
+    <p>Choose your vehicle:</p>
+    <div>
+         <input type="checkbox" id="bike" name="vehicle" value="bike">
+         <label for="bike">Bike</label>
+    </div>
+    <div>
+        <input type="checkbox" id="car" name="vehicle" value="car">
+        <label for="car">Car</label>
+    </div>
+    <div>
+       <input type="checkbox" id="bus" name="vehicle" value="bus">
+       <label for="car">Bus</label>
+    </div>
+    <div>
+        <input type="checkbox" id="jeep" name="vehicle" value="jeep">
+        <label for="car">Jeep</label>
+    </div>
+    <div>
+         <input type="checkbox" id="select-all">
+         <label for="car">Select All</label>
+    </div>
+    </body>
+</html>
+
+<script>
+
+   document.getElementById('select-all').onclick = function() 
+   {
+    var checkboxes = document.getElementsByName('vehicle');
+    for (var checkbox of checkboxes)
+     {
+        checkbox.checked = this.checked;
+    }
+}
+</script>
+  
